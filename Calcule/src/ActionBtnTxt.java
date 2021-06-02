@@ -67,10 +67,6 @@ public class ActionBtnTxt extends Application {
 		denum.textProperty().bind(num1.nombreProperty1().asString());
 		
 		
-		/**
-		 * 
-		 */
-		
 		// Try to add the binds together
 		
 		// Anonymous class (no name) of StringBinding
@@ -90,7 +86,7 @@ public class ActionBtnTxt extends Application {
 		
 	
 		// Bind text field txt a label num
-
+		
 		txt.textProperty().addListener((observable,oldValue,newValue) ->
 			{
 				num.setNombre(Double.parseDouble(newValue));
