@@ -67,14 +67,18 @@ public class ActionBtnTxt extends Application {
 		denum.textProperty().bind(num1.nombreProperty1().asString());
 		
 		
+		/**
+		 * 
+		 */
+		
 		// Try to add the binds together
 		
 		// Anonymous class (no name) of StringBinding
 		sum.textProperty().bind(new StringBinding(){
 				    {
 				        // Initializer
-				    	// Call twice to update the binded value
-				    	super.bind(denum.textProperty());
+				    	// On change la valeur du bind lorsque le textfield prnum change ET le textfield denum
+				    	super.bind(prnum.textProperty());
 				       super.bind(denum.textProperty());
 				    }
 				    @Override
