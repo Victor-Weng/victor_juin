@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /*
 * Author : victor
@@ -11,26 +13,24 @@ import java.io.IOException;
 public class Ecrire1
 	{
 		
-		public static void main(String[] args)	throws IOException,FileNotFoundException
+		public static void main(String[] args)	
 		{
-	
-				BufferedReader entree;
-				String ligne;
+				String Fichier="Ecrire.txt";
+				final String s1="hi \n";
+				final String s2="bonjour";
 				
-			
-					entree = new BufferedReader(new FileReader("monFichier.txt"));
-		
-					// while(il y a la possibilitee de lire)
-					while(entree.ready())
-					{
-					
-						ligne=entree.readLine();
-						System.out.println(ligne);
-					}
-					
-					entree.close();
-	
-
+				FileWriter ficAEcrire;
+				PrintWriter sortie;
+				
+				try {
+					ficAEcrire=new FileWriter(Fichier);
+					sortie=new PrintWriter(ficAEcrire);
+					sortie.print(s1);
+					sortie.print(s2);
+					sortie.close();
+				} catch (IOException e) {
+					System.out.println("Erreur entree/sortie");
+				}
 					
 		}
 
