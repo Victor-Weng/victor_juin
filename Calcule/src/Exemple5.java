@@ -18,7 +18,7 @@ public class Exemple5
 				String ligne;
 				
 			
-					entree = new BufferedReader(new FileReader("monFichier.txt"));
+					entree = new BufferedReader(new FileReader("C:\\Users\\victo\\OneDrive\\Desktop\\monFichier.txt"));
 		
 					// while(il y a la possibilitee de lire)
 					while(entree.ready())
